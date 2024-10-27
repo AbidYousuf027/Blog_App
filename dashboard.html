@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="./dashboard.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-bar">
+            <span>Personal Blogging App</span>
+            <h3 id="userName"></h3>
+            <a href="./profile.html">Profile</a>
+            <a href="./goodmorning.html">Goodmorning Readers</a>
+            <a href="./backtoall.html">All from Elon Musk</a>
+            <button type="button" id="logout">Logout</button>
+        </div>
+    </header>
+    <h2>Dashboard</h2>
+
+    
+    <main class="dashboard-page">
+        <div class="dashboard-box1">
+            <form action="submit" class="publish" id="publish">
+                <input type="text" id="place-holder" placeholder="Place holder" name="placeholder" required>
+                <textarea id="comments" name="comments" cols="30" rows="5">What is in your mind</textarea>
+                <button id="publish-Btn" type="submit">Publish blog</button>
+                <div id="messages">
+                    <p id="error-message" style="color: red; display: none;"></p>
+                    <p id="success-message" style="color: green; display: none;"></p>
+                  </div>
+                  
+            </form>
+        </div>
+        
+        <h2 class="my-blog">My Blogs</h2>
+
+        
+        <div id="dashboard-box2" class="dashboard-box2">
+            <div class="img" id="profileImage"></div>
+            <div class="detail">
+                <p id="msg" class="msg"></p>
+                <p id="user" class="user"></p>
+                <p id="content" class="content"></p>
+            </div>
+            <div class="button-group">
+                <button id="delete" type="submit"></button>
+                <button id="edit" type="submit"></button>
+            </div>
+            
+        </div>
+
+
+        
+
+    </main>
+    
+    
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

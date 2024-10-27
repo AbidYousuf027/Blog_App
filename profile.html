@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Profile</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav-bar">
+            <span>Personal Blogging App</span>
+            <h3 id="userName"></h3>
+            <a href="./dashboard.html">Dashboard</a>
+            <a href="./goodmorning.html">Goodmorning Readers</a>
+            <a href="./backtoall.html">All from Elon Musk</a>
+            <button type="button" id="logout">Logout</button>
+        </div>
+    </header>
+    <h2>Profile</h2>
+
+    <main class="profile-page">
+
+        <div class="profile-box">
+            <div class="img-cont">
+                <div class="img" id="profileImage"></div>
+                <div class="camera" id="select">
+                    <i class="fa-solid fa-camera"></i>
+                </div>
+                <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="previewImage(event)">
+            </div>
+            <div class="name" >
+                <h3 id="user_Name" ></h3>
+                <h4>Change Password<i id="typePassword" class="fa-solid fa-pen  icon2"></i></h4>
+            </div>
+
+            <form action="/change-password" method="post" id="changePassword" class="changePassword-form">
+                <input type="hidden" id="username" name="username" value="username">
+                <input type="password" id="old-password" name="old-password" placeholder="Old Password" required
+                    autocomplete="current-password">
+                <input type="password" id="new-password" name="new-password" placeholder="New Password" required
+                    autocomplete="new-password">
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password"
+                    required autocomplete="new-password">
+                <p class="error-message" id="error-message">Passwords do not match!</p>
+                <div id="success-message" style="display: none; color: green;"></div>
+                <button id="update" type="submit">Update Password</button>
+            </form>
+
+        </div>
+    </main>
+
+
+
+
+    <script src="./profile.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-bar">
+            <span>Personal Blogging App</span>
+            <button type="button" id="signup">Signup</button>
+        </div>
+    </header>
+<h2>Login</h2>
+<main class="login-page">
+    <div class="box">
+        <form action="/login" method="post" class="login-form" id="loginForm">
+            <input type="email" placeholder="Email" id="email" name="email" required autocomplete="email">
+            <input type="password" placeholder="Password" id="password" name="password" required autocomplete="current-password">
+            <button type="submit" id="loginBtn">Login</button>
+        </form>
+
+    </div>
+</main>
+
+
+
+   
+<script src="login.js"></script>
+</body>
+
+</html>
